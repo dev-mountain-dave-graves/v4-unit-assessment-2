@@ -11,6 +11,8 @@
 //CODE HERE
 
 
+var myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77];
+
 ////////////////////PROBLEM 2////////////////////
 /*
     The following array, nestedLetters, contains many levels of nested arrays.
@@ -21,6 +23,8 @@
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
+
+const foundZ = nestedLetters[5][2][1]
 
 
 ////////////////////PROBLEM 3////////////////////
@@ -39,12 +43,24 @@ const desert = ['rattlesnake', 'coyote']
 //CODE HERE
 
 
+const animals = [...forest, ...ocean, ...savannah, ...desert]
+console.log(animals)
+
+
 /*
     Now use the spread operator to make a copy of your animals array.
     Call the new array 'animalsCopy' and add 'elephant' onto the end of the array.
 */
 
 //CODE HERE
+
+
+const animalsCopy = [...animals, 'elephant']
+console.log(animals.length)
+console.log(animalsCopy.length)
+
+
+
 
 
 ////////////////////PROBLEM 4////////////////////
@@ -57,6 +73,22 @@ const desert = ['rattlesnake', 'coyote']
 
 //CODE HERE
 
+
+const compareNums = (num1, num2) => {
+    if(num1 > num2)
+    {
+        return num1
+    }
+    else if(num2 > num1)
+    {
+        return num1
+    }
+    else
+    {
+        return num1
+    }
+}
+
   
 ////////////////////PROBLEM 5////////////////////
 /*
@@ -68,7 +100,11 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+
+
+const bestMovie = (movie) => { return `${movie} is the best movie ever!`}
+ const fiddler = console.log(bestMovie('Fiddler on the Roof'))
+//   console.log(bestMovie(fiddler)
   
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -76,6 +112,8 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+
+ const jsNinja = () => {return 'I am a JavaScript ninja!'}
   
 
 ////////////////////PROBLEM 7////////////////////
@@ -97,6 +135,8 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+
+delete gameInfo.rating
   
 
 ////////////////////PROBLEM 8////////////////////
@@ -119,6 +159,8 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+
+
   
   
 ////////////////////PROBLEM 9////////////////////
@@ -162,6 +204,9 @@ const classes = [
 
 //CODE HERE
 
+
+
+
   
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -196,6 +241,15 @@ let pairsArray = []
 //CODE HERE
 
 
+function Dog(name, age, breed, tricks){
+    this.name = name
+    this.age = age
+    this.breed = breed
+    this.tricks = tricks
+}
+
+
+
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age, 
     'Jack Russell' for the breed, and an array containing the strings 'sit' and 'shake'.
@@ -203,6 +257,9 @@ let pairsArray = []
 */
 
 //CODE HERE
+
+
+const fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake'])
   
 
 ////////////////////PROBLEM 12////////////////////
@@ -215,14 +272,21 @@ let pairsArray = []
 //CODE HERE
 
 
+function bark(){
+    return `${this.name} says bark!`
+}
+
+
 /*
     Invoke the call method on bark, passing in fido as the context
     and saving the result to a variable called fidoSpeak.
 */
 
 //CODE HERE
+
+const fidoSpeak = bark.call(fido)
   
-  
+  console.log(fidoSpeak)
 ////////////////////PROBLEM 13////////////////////
 /*
     Write a function called 'teachTrick' that will take in one parameter, trick, 
@@ -233,6 +297,13 @@ let pairsArray = []
 
 //CODE HERE
 
+function teachTrick(trick){
+    let tricks = []
+     tricks.push(trick)
+     console.log(tricks)
+     return tricks
+}
+
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -240,6 +311,8 @@ let pairsArray = []
 */
 
 //CODE HERE
+
+
   
   
 ////////////////////PROBLEM 14////////////////////
@@ -253,6 +326,12 @@ let pairsArray = []
 //CODE HERE
 
 
+
+function dogIntro(treat, toy){
+    return `${name} is a ${breed} that loves ${treat} and their ${toy}`
+}
+
+
 /*
     Invoke the apply method on dogIntro, passing in fido as the context 
     with 'chicken' as the treat and 'tennis ball' as the toy
@@ -260,6 +339,8 @@ let pairsArray = []
 */
 
 //CODE HERE
+
+dogIntro.apply(this, ['fido', 'chicken', 'tennis ball'])
   
 
 ////////////////////PROBLEM 15////////////////////
@@ -270,6 +351,15 @@ let pairsArray = []
 */
 
 //CODE HERE
+
+
+function Phone(brand, model, storage, color, sold){
+this.brand = brand;
+this.model = model;
+this.storage = storage;
+this.color = color;
+this.sold = sold;
+}
 
   
 /*
@@ -284,11 +374,11 @@ let pairsArray = []
 */
 
 //CODE HERE
-  // let phone1 = 
+  let phone1 = Phone('Kyocera', '1102S', 20524, Red, false)
   
-  // let phone2 = 
+  let phone2 = Phone('Blackberry', '9900', 93276657, Blue, false)
   
-  // let phone3 = 
+  let phone3 = Phone('Google', 'Pixel 2', 536455765475, White, false)
   
 /*
     Last, add a prototype method to Phone.
@@ -300,4 +390,10 @@ let pairsArray = []
 
 //CODE HERE
 
+const Sell = function(){
+    PSellhone.prototype.Phone = function(){
+        this.sold = true;
+    }
+    return `${this.brand} ${this.model} has been sold.`
+}
   

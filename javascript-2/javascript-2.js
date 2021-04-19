@@ -37,6 +37,24 @@ let foods = [
 
 //CODE HERE
 
+
+
+// foods.forEach(myFunction);
+
+// function myFunction(foods){
+ 
+//   foods.push(calories);
+//   this.carbs = foods.carbs * 4;
+//   this.protein = foods.protein * 4;
+//   this.fat = foods.fat * 9;
+// console.log(this.protein)
+//   calories = this.carbs + this.protein + this.fat
+//   console.log(calories)
+
+// }
+
+
+
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -81,6 +99,20 @@ const products = [
 */
 
 //CODE HERE
+
+
+const saleProducts = products.map((s) => {
+  s.price = (s.price - (s.price * .25))
+  console.log(s)
+  return s
+})
+
+function map1Function(num) {
+const reduceAmt = num * .25;
+ return num - reduceAmt;
+}
+
+
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -216,6 +248,9 @@ const userInfo = {
 */
 
 //CODE HERE
+
+
+
 
 ////////////////////PROBLEM 10////////////////////
 /*
