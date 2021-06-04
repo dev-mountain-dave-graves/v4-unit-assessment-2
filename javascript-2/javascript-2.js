@@ -252,6 +252,8 @@ const userInfo = {
 
 
 
+
+
 ////////////////////PROBLEM 10////////////////////
 /*
   Set the value of topic below to the last item in gn@rly_c0der_007's topics array
@@ -286,6 +288,34 @@ const userInfo = {
 */
 
 //CODE HERE
+
+
+
+const person = {
+  name:"Davy",
+  age: 37,
+  jobs:[
+    "chick-fil-a",
+    "Superior Alarm",
+    "One Stop Portal"
+],
+  favorites:{
+    color: "Blue",
+    number: 69,
+    book:"Lone Survivor",
+    
+  },
+  kids:[
+      "Mason",
+      8
+    ,
+    "Kaity",
+      2
+    
+  ],
+}
+
+
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*

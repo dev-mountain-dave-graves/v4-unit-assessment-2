@@ -205,7 +205,15 @@ const classes = [
 //CODE HERE
 
 
-
+for (i = 0; i < classes.length; i++){
+    for (let key in classes[i]){
+        console.log(classes[i][key])
+        if(classes[i][key] === true)
+        {
+            classes[i][key] = false
+        }
+    }
+}
 
   
 ////////////////////PROBLEM 10////////////////////
