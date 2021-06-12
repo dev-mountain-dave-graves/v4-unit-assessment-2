@@ -163,6 +163,13 @@ const shippingInfo = {
 
 //CODE HERE
 
+
+
+
+}
+
+
+
 ////////////////////PROBLEM 6////////////////////
 /*
   Helen has a daughter named Ellen that lives at the same address.
